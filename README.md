@@ -12,16 +12,21 @@ in progress
 
 ```bash
 pip3 install pandas
+
+pip3 install requests
+
+pip3 install beautifulsoup4
+
+pip3 install requests-cache
+
+if _DarwinOS:
+  pip3 install lxml
 ```
 
 ## Usage
 
 ```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+python3 scrap.py
 ```
 
 ## Contributing
