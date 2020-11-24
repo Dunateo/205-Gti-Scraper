@@ -8,7 +8,6 @@ I'm a big fan of the 205 Gti Peugeot unfortunately the value is going up and the
 
 ## Installation
 
-in progress
 
 ```bash
 pip3 install pandas

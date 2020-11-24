@@ -45,15 +45,21 @@ def display_pandas(list_all_ads):
 def main():
     #execute la requête
     response = requests.get(url, headers=headers)
-    print(response)
-    #beautiful soup parsing
-    soup = BeautifulSoup(response.text, "lxml")
-    div_annonce = soup.find(class_="styles_classifiedColumn__LeJpD")
-    all_ads = div_annonce.findAll(class_="styles_adListItem__3Z_IE")
 
-    list_all_ads = getting_add(all_ads)
+    if response == "<Response [200]>":
+        #beautiful soup parsing
+        soup = BeautifulSoup(response.text, "lxml")
+        div_annonce = soup.find(class_="styles_classifiedColumn__LeJpD")
+        all_ads = div_annonce.findAll(class_="styles_adListItem__3Z_IE")
 
-    display_pandas(list_all_ads)
+        list_all_ads = getting_add(all_ads)
+
+        display_pandas(list_all_ads)
+
+    else:
+        print("Error having a bad status code:")
+        print(response)
+
 
     pass
 
